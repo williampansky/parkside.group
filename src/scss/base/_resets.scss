@@ -1,0 +1,54 @@
+// ========================================================================
+// BASE => RESETS
+// ========================================================================
+html,
+body {
+  font-size: $font-base-size;
+}
+
+body {
+  color: $color-black;
+  background: $color-muted;
+  font-family: ProximaNova, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: -0.003em;
+  line-height: 1.4875;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, 
+a:visited {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover, 
+  &:focus {
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+// -- add text-decoration to message posts
+.topic-body a, 
+.topic-body a:visited {
+  color: $color-primary;
+
+  &:hover, 
+  &:focus {
+    color: $color-primary;
+    text-decoration: underline;
+  }
+}
+
+// -- override button higlight clashing
+.btn:hover, 
+.btn.btn-hover {
+  & .d-button-label.selected-name {
+    color: $color-white-light;
+  }
+}

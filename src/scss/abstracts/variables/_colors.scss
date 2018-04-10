@@ -1,0 +1,100 @@
+// ========================================================================
+// ABSTRACTS => DEFINITIONS => COLORS
+// ========================================================================
+
+/// This document contains any and all necessary variables and mapping for 
+/// this project's color scheme. Feel free to edit the variables as needed. 
+/// However, please take care when editing the Sass color map(s).
+/// 
+/// Here's a breakdown of how to access values from inside nested color maps 
+/// in conjunction with our included function at the end of this file:
+/// 
+/// ```scss
+/// .foo { color: color(primary, base); }
+///   ^      ^      ^      ^      ^
+///   1      2      3      4      5
+/// 
+/// 1.  HTML DOM element.
+/// 2.  CSS property selector.
+/// 3.  Sass map selector; this example: color = $colors:( ... );
+/// 4.  Map $key selector; this accesses the "primary" nested map.
+/// 5.  Map $value selector; this accesses the "base" value of our "primary" map.
+/// ```
+/// 
+/// Another way to think of this function is as follows: 
+/// ```scss
+///   element { property: $mapName($key, $value); }
+/// ```
+/// 
+/// @name     color-map
+/// @group    Variables
+/// 
+/// @since    1.0.0
+/// @access   public
+/// @author   [William Pansky](mailto:william.pansky@sabre.com)
+/// 
+/// @example scss - @function color($color-name, $color-variant:null)
+///   .foo {
+///     color: color(primary, base);
+///   }
+/// 
+/// @link     https://codepen.io/jakealbaugh/post/using-sass-functions-to-access-complex-variable-maps [Codepen.io] Using Sass functions to access complex variable maps.
+
+
+
+// COLOR DEFINITION VARIABLES
+// ========================================================================
+// Define your colors here
+$color-lighten-amount:    15%;
+$color-darken-amount:     20%;
+$color-trans-amount:      0.5;
+
+$color-primary:         #1e87f0 !default;
+$color-primary-light:     mix(white, $color-primary, $color-lighten-amount);
+$color-primary-dark:      mix(black, $color-primary, $color-darken-amount);
+$color-primary-trans:     transparentize($color-primary, $color-trans-amount);
+
+$color-secondary:       #28a5f5 !default;
+$color-secondary-light:   mix(white, $color-secondary, $color-lighten-amount);
+$color-secondary-dark:    mix(black, $color-secondary, $color-darken-amount);
+$color-secondary-trans:   transparentize($color-secondary, $color-trans-amount);
+
+$color-accent:          #bb00e0 !default;
+$color-accent-light:      mix(white, $color-accent, $color-lighten-amount);
+$color-accent-dark:       mix(black, $color-accent, $color-darken-amount);
+$color-accent-trans:      transparentize($color-accent, $color-trans-amount);
+
+$color-black:           #313131 !default;
+$color-black-light:       mix(white, $color-black, $color-lighten-amount);
+$color-black-dark:        mix(black, $color-black, $color-darken-amount);
+$color-black-trans:       transparentize($color-black, $color-trans-amount);
+
+$color-white:           #fdfdfd !default;
+$color-white-light:       mix(white, $color-white, $color-lighten-amount);
+$color-white-dark:        mix(black, $color-white, $color-darken-amount);
+$color-white-trans:       transparentize($color-white, $color-trans-amount);
+
+$color-gray:            #767676 !default;
+$color-gray-light:        mix(white, $color-gray, $color-lighten-amount);
+$color-gray-dark:         mix(black, $color-gray, $color-darken-amount);
+$color-gray-trans:        transparentize($color-gray, $color-trans-amount);
+
+$color-muted:           #f4f4f6 !default;
+$color-muted-light:       mix(white, $color-muted, $color-lighten-amount);
+$color-muted-dark:        mix(black, $color-muted, $color-darken-amount);
+$color-muted-trans:       transparentize($color-muted, $color-trans-amount);
+
+$color-success:	        #32d296 !default;
+$color-success-light:     mix(white, $color-success, $color-lighten-amount);
+$color-success-dark:      mix(black, $color-success, $color-darken-amount);
+$color-success-trans:     transparentize($color-success, $color-trans-amount);
+
+$color-warning:         #faa05a !default;
+$color-warning-light:     mix(white, $color-warning, $color-lighten-amount);
+$color-warning-dark:      mix(black, $color-warning, $color-darken-amount);
+$color-warning-trans:     transparentize($color-warning, $color-trans-amount);
+
+$color-danger:          #f23e60 !default;
+$color-danger-light:      mix(white, $color-danger, $color-lighten-amount);
+$color-danger-dark:       mix(black, $color-danger, $color-darken-amount);
+$color-danger-trans:      transparentize($color-danger, $color-trans-amount);

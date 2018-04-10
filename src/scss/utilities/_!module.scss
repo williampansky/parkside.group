@@ -1,0 +1,19 @@
+// ========================================================================
+// UTILITIES
+// Helper utility styles for adjusting margin, padding, etc.
+// ========================================================================
+
+/***
+The utilities/ folder contains various files related to general, reusable,
+single-operation classes.
+
+e.g: .text-uppercase { text-transform: uppercase; }
+e.g: <p class="text-uppercase">foo</p>
+
+Note that it is acceptable to disable Stylelint's `no-important` rule for utils.
+***/
+
+// @import 'display';
+// @import 'flex';
+@import 'no-scroll';
+// @import 'svg-fill';

@@ -1,0 +1,36 @@
+// ========================================================================
+// UTILITIES => DISPLAY HELPERS
+// ========================================================================
+
+/// Classes to apply a single display property override (via `!important`).
+/// 
+/// ```css
+/// .display-*:   block, inline-block, flex, initial, inherit, none
+/// ```
+/// 
+/// @name     Display
+/// @group    Utilities
+/// 
+/// @since    1.0.0
+/// @since    1.0.1 Added `!important` to each class.
+/// @access   public
+/// @author   [William Pansky](mailto:william.pansky@sabre.com)
+/// 
+/// @example markup
+///   <div class="display-flex" />
+
+// Throw our desired outputs into an array
+$displays:
+  (block,   block),
+  (inline,  inline-block),
+  (flex,    flex),
+  (initial, initial),
+  (inherit, inherit),
+  (none,    none);
+
+// Loop our array to render out a class for each prop
+/* stylelint-disable */
+@each $key, $value in $displays {
+  .display-#{$key} { display: $value !important; }
+}
+/* stylelint-enable */

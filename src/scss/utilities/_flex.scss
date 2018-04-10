@@ -1,0 +1,44 @@
+// ========================================================================
+// UTILITIES => FLEX UTILS
+// ========================================================================
+
+/// Stackable classes to apply various flex properties.
+/// 
+/// @name     Flex
+/// @group    Utilities
+/// 
+/// @since    1.0.0
+/// @access   public
+/// @author   [William Pansky](mailto:william.pansky@sabre.com)
+/// 
+/// @example css
+///   .display-flex { display: flex !important; }
+///   .flex-direction-row { flex-direction: row; }
+///   .flex-align-center { align-items: center; }
+///   .flex-justify-between { justify-content: space-between; }
+
+$flex-values: 
+  (align-baseline,            align-items,          baseline),
+  (align-center,              align-items,          center),
+  (align-start,               align-items,          flex-start),
+  (align-end,                 align-items,          flex-end),
+  (align-stretch,             align-items,          stretch),
+  (justify-baseline,          justify-content,      baseline),
+  (justify-center,            justify-content,      center),
+  (justify-start,             justify-content,      flex-start),
+  (justify-end,               justify-content,      flex-end),
+  (justify-evenly,            justify-content,      space-evenly),
+  (justify-around,            justify-content,      space-around),
+  (justify-between,           justify-content,      space-between),
+  (justify-stretch,           justify-content,      stretch),
+  (wrap-wrap,                 flex-wrap,            wrap),
+  (wrap-nowrap,               flex-wrap,            nowrap),
+  (wrap-reverse,              flex-wrap,            wrap-reverse),
+  (direction-column,          flex-direction,       column),
+  (direction-column-reverse,  flex-direction,       column-reverse),
+  (direction-row,             flex-direction,       row),
+  (direction-row-reverse,     flex-direction,       row-reverse);
+
+@each $key, $param, $value in $flex-values {
+  .flex-#{$key} { #{$param}: $value; }
+}

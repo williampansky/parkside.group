@@ -1,0 +1,102 @@
+// ========================================================================
+// PAGES
+// Page-specific styling, such as homepage, if necessary.
+// ========================================================================
+
+/***
+If you have page-specific styles, it is better to put them in a pages/ folder, 
+in a file named after the page. For instance, it’s not uncommon to have very 
+specific styles for the home page hence the need for a _homepage.scss file 
+in pages/.
+***/
+
+// @import 'homepage';
+
+
+// ========================================================================
+// COMPONENTS => Topic List
+// Main forum page displaying a list of posts/topics.
+// ========================================================================
+.topic-list  {
+  
+  //_____________________________________
+  // CATEGORIES
+  & .category {
+    text-align: right;
+
+    &[data-sort-order='category'] {
+      padding-right: 12px;
+    }
+
+    & .badge-wrapper:hover .category-name,
+    & .badge-wrapper:focus .category-name {
+      color: $color-primary;
+    }
+  }
+
+
+  & .activity,
+  & .posts {
+    width: 70px;
+  }
+
+
+  //_____________________________________
+  // POST TITLES
+  & .topic-list-item.visited a.title:not(.badge-notification), 
+  & .latest-topic-list-item.visited a.title:not(.badge-notification), 
+  & .category-topic-link.visited a.title:not(.badge-notification) {
+    color: $color-gray;
+    font-weight: normal;
+    
+    &:hover, 
+    &:focus {
+      color: $color-black;
+    }
+  }
+
+
+  & .main-link a.title {
+    color: $color-black;
+    font-weight: bold;
+    
+    &:hover, 
+    &:focus {
+      color: $color-primary;
+    }
+  }
+
+  
+  //_____________________________________
+  // POST USERS / AVATAR FLOATIES
+  & .posters a {
+    transition: transform 200ms ease;
+    
+    &:hover, 
+    &:focus {
+      transform: scale(1.45);
+    }
+  }
+}
+
+
+// ========================================================================
+// COMPONENTS => Topic List Bottom
+// Topic list's footer section.
+// ========================================================================
+.topic-list-bottom {
+  //_____________________________________
+  // TOPIC FOOTER MESSAGE
+  // e.g. "There are no more latest topics."
+  & .footer-message {
+    padding-left: 10px;
+  
+    & h3 {
+      color: $color-gray;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 1em;
+      margin: 0;
+    }
+  }
+}

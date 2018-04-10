@@ -1,0 +1,30 @@
+// ========================================================================
+// LAYOUT => GRID
+// ========================================================================
+/* Main Content Wrapper */
+#main-outlet {
+  background: $color-white;
+  padding-top: 5.4875em;
+}
+
+.wrap {
+  padding: 0 1rem;
+}
+
+
+// COMPONENTS => SIDE NAV
+// ========================================================================
+.nav-stacked {
+  a.active,
+  a.active:hover,
+  a.active:focus {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+
+  a,
+  a:visited {
+    color: $color-white;
+    background-color: $color-gray-light;
+  }
+}

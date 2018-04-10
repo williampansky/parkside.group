@@ -1,0 +1,46 @@
+// ========================================================================
+// LAYOUT => FOOTER
+// ========================================================================
+
+.custom-footer {
+  font-size: $font-base-size;
+  text-align: center;
+  max-width: 900px;
+  padding: 2em 1em;
+  margin: 0 auto;
+
+  & .nav-links {
+    margin: 0 auto 1em;
+  }
+
+  & .nav-links ul {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  & .nav-link {
+    font-weight: bold;
+    font-size: 1em;
+
+    &:hover, 
+    &:focus {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+
+  & .nav-link + .nav-link {
+    border-left: 1px solid $color-gray-trans;
+    padding-left: 1em;
+    margin-left: 1em;
+  }
+
+  & .copyright {
+    font-size: 0.875em;
+  }
+}
